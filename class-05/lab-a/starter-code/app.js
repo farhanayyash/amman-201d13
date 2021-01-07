@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   var sum = a+b;
   var reultString = 'The sum of '+a+' and '+b +' is '+sum+'.';
-  console.log(sum);
+  //console.log(sum);
   return[sum,reultString];
 
 }
@@ -81,12 +81,19 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var a = sumArr[0];
+  var b = sumArr[1];
+  var c = sumArr[2];
+  var gatsum= sumAndMultiply(a,b,c);
+  //console.log(gatsum[0]);
+  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum[0] +" is their sum."
+  //console.log(rus);
+  return [gatsum[0],rus];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
