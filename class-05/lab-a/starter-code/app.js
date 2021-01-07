@@ -86,7 +86,7 @@ function sumArray(sumArr) { //eslint-disable-line
   var c = sumArr[2];
   var gatsum= sumAndMultiply(a,b,c);
   //console.log(gatsum[0]);
-  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum[0] +" is their sum."
+  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum[0] +" is their sum.";
   //console.log(rus);
   return [gatsum[0],rus];
 }
@@ -109,11 +109,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var a = multArr[0];
+  var b = multArr[1];
+  var c = multArr[2];
+  var gatsum= sumAndMultiply(a,b,c);
+  //console.log(gatsum[0]);
+  var rus = "The numbers "+a+","+b+","+c +" have a product of "+ gatsum[1]+".";
+  //console.log(rus);
+  return [gatsum[1],rus];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
