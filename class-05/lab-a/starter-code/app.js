@@ -119,11 +119,12 @@ function multiplyArray(multArr) { //eslint-disable-line
   var a = multArr[0];
   var b = multArr[1];
   var c = multArr[2];
-  var gatsum= sumAndMultiply(a,b,c);
+  var gatsum= multiply(a,b);
+  gatsum = multiply(gatsum[0],c);
   //console.log(gatsum[0]);
-  var rus = "The numbers "+a+","+b+","+c +" have a product of "+ gatsum[1]+".";
+  var rus = "The numbers "+a+","+b+","+c +" have a product of "+ gatsum[0]+".";
   //console.log(rus);
-  return [gatsum[1],rus];
+  return [gatsum[0],rus];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
