@@ -89,11 +89,13 @@ function sumArray(sumArr) { //eslint-disable-line
   var a = sumArr[0];
   var b = sumArr[1];
   var c = sumArr[2];
-  var gatsum= sumAndMultiply(a,b,c);
-  //console.log(gatsum[0]);
-  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum[0] +" is their sum.";
+  var gatsum= sum(a,b);
+  gatsum = sum(gatsum[0],c);
+  gatsum = gatsum[0];
+  //console.log(gatsum);
+  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum +" is their sum.";
   //console.log(rus);
-  return [gatsum[0],rus];
+  return [gatsum,rus];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -114,18 +116,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  var a = multArr[0];
-  var b = multArr[1];
-  var c = multArr[2];
-  var gatsum= sumAndMultiply(a,b,c);
-  //console.log(gatsum[0]);
-  var rus = "The numbers "+a+","+b+","+c +" have a product of "+ gatsum[1]+".";
-  //console.log(rus);
-  return [gatsum[1],rus];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+//testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -149,27 +144,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-  var multx = 1;
-  var ans="";
-  for(var i =0; i<dynamicArray.length; i++){
-      var res = multiply(dynamicArray[i],multx);
-      var res1=res[0];
-      multx = res1;
-      if(i==(dynamicArray.length-1) || i == 0){
-        if(i==(dynamicArray.length-1)){
-          ans += ","+ dynamicArray[i];
-        }else{
-        ans += dynamicArray[i];}
-      }else{
-        ans =ans +","+dynamicArray[i];
-      }
-  }
-  var finans = "The numbers "+ans +" have a product of "+multx+".";
-  //console.log(finans);
-  return[multx,finans]; 
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyAnyArray(testDynamicArray);
+//testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
