@@ -89,11 +89,13 @@ function sumArray(sumArr) { //eslint-disable-line
   var a = sumArr[0];
   var b = sumArr[1];
   var c = sumArr[2];
-  var gatsum= sumAndMultiply(a,b,c);
-  //console.log(gatsum[0]);
-  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum[0] +" is their sum.";
+  var gatsum= sum(a,b);
+  gatsum = sum(gatsum[0],c);
+  gatsum = gatsum[0];
+  //console.log(gatsum);
+  var rus = a+","+b+","+c +" was passed in as an array of numbers, and "+ gatsum +" is their sum.";
   //console.log(rus);
-  return [gatsum[0],rus];
+  return [gatsum,rus];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
